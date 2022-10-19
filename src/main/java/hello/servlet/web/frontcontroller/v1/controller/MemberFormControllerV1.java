@@ -14,9 +14,7 @@ public class MemberFormControllerV1 implements ControllerV1 {
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String viewPath = "/WEB-INF/views/new-form.jsp";
-
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
-
         dispatcher.forward(request,response); //서버내부에서 다시 호출이 발생함 (리다이렉트아님) servlet or jsp 찾아서 호출
     }
 }
